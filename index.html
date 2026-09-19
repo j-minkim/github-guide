@@ -1152,8 +1152,8 @@ node_modules
     <h1>종합 <span class="hl3">시험</span> — 오늘 배운 걸로 풀어요</h1>
     <p class="subtitle" style="font-size:16px;">각 보기를 고른 뒤 맨 아래 <strong>채점하기</strong>를 누르면 한 번에 채점돼요. 70% 이상이면 합격.</p>
     <div class="kit-exam" data-group="exam" data-pass="0.7">
-      <p class="kit-exam-title">GitHub 기초 종합 시험 (5문항)</p>
-      <p class="kit-exam-desc">commit/push · branch · PR · .gitignore · 충돌 — 다섯 가지를 한 번에 점검합니다.</p>
+      <p class="kit-exam-title">GitHub 기초 종합 시험 (10문항)</p>
+      <p class="kit-exam-desc">commit/push · branch · PR · .gitignore · 충돌 · fork/clone · README · Issues · pull · 되돌리기 — 열 가지를 한 번에 점검합니다.</p>
 
       <div class="kit-mcq">
         <p class="kit-mcq-q">1. "버튼 색 변경"을 commit까지만 했어요. 팀원이 GitHub에서 볼 수 있게 하려면?</p>
@@ -1210,11 +1210,66 @@ node_modules
         <div class="kit-mcq-explain" hidden>정답 (B). 충돌은 "누구 걸 쓸지" 고르면 끝나요. VS Code 인라인 버튼(Accept Current/Incoming/Both)으로 고른 뒤 마커를 없애고 저장→stage→커밋→Sync 하면 됩니다.</div>
       </div>
 
+      <div class="kit-mcq">
+        <p class="kit-mcq-q">6. fork와 clone의 차이로 알맞은 것은?</p>
+        <div class="kit-mcq-opts">
+          <button class="kit-mcq-opt" type="button">(A) 둘 다 완전히 같은 기능이라 아무거나 써도 된다</button>
+          <button class="kit-mcq-opt" type="button" data-correct>(B) fork는 남의 저장소를 내 GitHub 계정으로 복사하는 것, clone은 저장소를 내 PC로 내려받는 것</button>
+          <button class="kit-mcq-opt" type="button">(C) clone은 GitHub에서만, fork는 내 PC에서만 할 수 있다</button>
+          <button class="kit-mcq-opt" type="button">(D) fork는 커밋 기록을 전부 삭제하는 기능이다</button>
+        </div>
+        <div class="kit-mcq-live" role="status" aria-live="polite"></div>
+        <div class="kit-mcq-explain" hidden>정답 (B). fork는 남의 저장소를 내 GitHub 계정 아래로 복사하는 것이고, clone은 (내 것이든 남의 것이든) 저장소를 내 PC로 내려받는 것이에요. 오픈소스에 기여할 땐 보통 fork → clone → 브랜치 → PR 순서로 갑니다.</div>
+      </div>
+
+      <div class="kit-mcq">
+        <p class="kit-mcq-q">7. README.md 파일이 저장소에서 하는 역할로 가장 알맞은 것은?</p>
+        <div class="kit-mcq-opts">
+          <button class="kit-mcq-opt" type="button" data-correct>(A) 저장소 페이지 첫 화면에 자동으로 렌더링되는 소개/설명 문서</button>
+          <button class="kit-mcq-opt" type="button">(B) 커밋 기록을 저장하는 파일</button>
+          <button class="kit-mcq-opt" type="button">(C) 비밀번호나 API 키를 안전하게 저장하는 파일</button>
+          <button class="kit-mcq-opt" type="button">(D) GitHub Actions 자동배포 설정 파일</button>
+        </div>
+        <div class="kit-mcq-live" role="status" aria-live="polite"></div>
+        <div class="kit-mcq-explain" hidden>정답 (A). README.md는 저장소 메인 페이지 첫 화면에 그대로 렌더링돼요. 프로젝트 소개·설치법·사용법을 적어두면 포트폴리오 첫인상을 크게 좌우합니다.</div>
+      </div>
+
+      <div class="kit-tf" data-answer="true">
+        <p class="kit-tf-claim">8. (참/거짓) Issues는 버그 제보나 할 일을 기록하고 추적하는 용도로 쓸 수 있다.</p>
+        <div class="kit-tf-btns"><button class="kit-tf-btn" type="button" data-val="true">참</button><button class="kit-tf-btn" type="button" data-val="false">거짓</button></div>
+        <div class="kit-tf-live" role="status" aria-live="polite"></div>
+        <div class="kit-tf-why" hidden>맞아요(참). Issues는 버그·아이디어·할 일을 카드처럼 등록해 추적하는 기능이에요. 커밋 메시지나 PR에서 "#번호"로 연결해 자동으로 닫히게 할 수도 있습니다.</div>
+      </div>
+
+      <div class="kit-mcq">
+        <p class="kit-mcq-q">9. pull이 하는 일로 가장 알맞은 것은?</p>
+        <div class="kit-mcq-opts">
+          <button class="kit-mcq-opt" type="button">(A) 내 PC의 변경 사항을 GitHub로 올리는 것</button>
+          <button class="kit-mcq-opt" type="button" data-correct>(B) GitHub(원격 저장소)의 최신 내용을 내 PC로 받아오는 것</button>
+          <button class="kit-mcq-opt" type="button">(C) 브랜치를 통째로 삭제하는 것</button>
+          <button class="kit-mcq-opt" type="button">(D) 커밋 메시지만 수정하는 것</button>
+        </div>
+        <div class="kit-mcq-live" role="status" aria-live="polite"></div>
+        <div class="kit-mcq-explain" hidden>정답 (B). pull은 원격 저장소의 최신 커밋을 내 로컬로 받아오는 동작이에요. 팀원이 push한 내용을 반영하려면 작업 전에 pull부터 하는 습관이 중요합니다.</div>
+      </div>
+
+      <div class="kit-mcq">
+        <p class="kit-mcq-q">10. 방금 커밋했는데(아직 push 전) 내용을 취소하고 싶어요. 가장 적절한 방법은?</p>
+        <div class="kit-mcq-opts">
+          <button class="kit-mcq-opt" type="button">(A) 저장소를 통째로 지우고 새로 만든다</button>
+          <button class="kit-mcq-opt" type="button" data-correct>(B) VS Code Source Control의 되돌리기 기능이나 git reset으로 로컬에서 커밋을 취소한다</button>
+          <button class="kit-mcq-opt" type="button">(C) 그대로 강제로 push 한다</button>
+          <button class="kit-mcq-opt" type="button">(D) 해당 파일을 .gitignore에 추가한다</button>
+        </div>
+        <div class="kit-mcq-live" role="status" aria-live="polite"></div>
+        <div class="kit-mcq-explain" hidden>정답 (B). 아직 push 전이라면 로컬에서 되돌리는 게 가장 안전해요. 이미 push까지 했다면 강제로 되돌리기보다 revert로 새 커밋을 만들어 되돌리는 게 안전합니다.</div>
+      </div>
+
       <button class="kit-exam-submit" type="button">채점하기</button>
       <p class="kit-exam-result" role="status" aria-live="polite"></p>
       <div class="kit-exam-review" hidden>각 문항의 ✓ 정답과 해설을 다시 읽어보세요. 헷갈린 주제는 사이드바에서 해당 슬라이드로 돌아가 복습하면 좋아요.</div>
     </div>
-    <aside class="kit-notes" hidden>마무리 직전 종합 점검 슬라이드예요. 학생들이 각 문항을 고른 뒤 "채점하기"를 한 번 누르면 5문항이 동시에 채점되고 70% 이상이면 합격으로 표시됩니다. 다섯 주제(commit/push·branch·PR·.gitignore·충돌)가 오늘의 뼈대이니, 틀린 문항은 사이드바에서 해당 슬라이드로 돌아가 복습하라고 안내하세요. 정답·해설은 인쇄본에서도 모두 펼쳐집니다.</aside>
+    <aside class="kit-notes" hidden>마무리 직전 종합 점검 슬라이드예요. 학생들이 각 문항을 고른 뒤 "채점하기"를 한 번 누르면 10문항이 동시에 채점되고 70% 이상이면 합격으로 표시됩니다. 열 가지 주제(commit/push·branch·PR·.gitignore·충돌·fork/clone·README·Issues·pull·되돌리기)가 오늘의 뼈대이니, 틀린 문항은 사이드바에서 해당 슬라이드로 돌아가 복습하라고 안내하세요. 정답·해설은 인쇄본에서도 모두 펼쳐집니다.</aside>
   </div>
 
   <!-- 마무리 -->
